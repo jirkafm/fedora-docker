@@ -1,0 +1,2 @@
+exec jwm &
+exec xterm -maximized -e tmux &
