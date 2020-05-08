@@ -21,10 +21,11 @@ docker run --rm -p2222:22 -it jirkafm:fedora-onstartup-download
 ```
 
 #### fedora-myenv
-I use this image to test changes in my environemnt. It will create a user with my shell configuration taken from https://github.com/jirkafm/my-env.
+I use this image to test changes in my environemnt. It will create a user with my shell configuration taken from https://github.com/jirkafm/my-env. `INSTALL_VIM_DEPS=Y` will download necessary deps for vim plugins.
 
 ```
 docker run --rm -e USERNAME='john' -e PASSWORD='doe' -it jirkafm:fedora-myenv
+docker run --rm -e USERNAME='john' -e PASSWORD='doe' -e INSTALL_VIM_DEPS='Y' -it jirkafm:fedora-myenv
 ```
 
 ### fedora-vnc
