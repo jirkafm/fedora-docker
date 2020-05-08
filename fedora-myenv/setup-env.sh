@@ -27,4 +27,4 @@ su - $USERNAME -c "git clone https://github.com/jirkafm/fedora-setup $ENV_SETUP_
 sed -ie 's/OVERWRITE=N/OVERWRITE=Y/' $ENV_SETUP_DIR/scripts/env.sh
 
 su - $USERNAME -c "export CHSH=no && export RUNZSH=no && cd $ENV_SETUP_DIR && ./control.sh zshell"
-su - $USERNAME -c "cd $ENV_SETUP_DIR && ./control.sh env"
+su - $USERNAME -c "export INSTALL_VIM_DEPS=$INSTALL_VIM_DEPS && cd $ENV_SETUP_DIR && ./control.sh env"
